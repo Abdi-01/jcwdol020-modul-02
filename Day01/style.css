@@ -1,0 +1,12 @@
+/* EXTERNAL STYLING */
+
+/* 2. ID SELECTOR */
+#content-1 {
+  background-color: beige;
+}
+
+/* 3. Class selector */
+.text-warning {
+  background-color: orange;
+  font-weight: bold;
+}
