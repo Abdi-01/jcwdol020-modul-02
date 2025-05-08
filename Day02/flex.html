@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Property : Display Flex</title>
+    <style>
+      /*  */
+      #navbar {
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      #nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <div>
+        <span>LOGO</span>
+      </div>
+      <ul id="nav-menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Help</li>
+      </ul>
+      <div id="nav-action">
+        <button>Sign In</button>
+        <button>Sign Up</button>
+      </div>
+    </div>
+  </body>
+</html>

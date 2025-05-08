@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Property : Media query</title>
+    <style>
+      .text-danger {
+        color: red;
+      }
+      /* Small screen */
+      @media screen and (max-width: 480px) {
+        /* Type decoration/selector here */
+        .text-sm-danger {
+          color: orange;
+        }
+      }
+
+      /* Medium screen */
+      @media screen and (min-width: 481px) and (max-width: 768px) {
+        /* Type decoration/selector here */
+        .text-md-danger {
+          color: blue;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1 class="text-danger text-sm-danger text-md-danger">
+        Responsive Style
+      </h1>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Property : Position</title>
+    <style>
+      #container {
+        border: 2px solid red;
+        width: 500px;
+        height: 800px;
+        margin: 40px auto;
+        position: relative;
+      }
+
+      #container > div {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+
+      #item-1 {
+        background-color: rgba(250, 3, 3, 0.765);
+        position: relative;
+        left: 10px;
+      }
+
+      #item-2 {
+        background-color: rgba(64, 29, 238, 0.765);
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+      }
+
+      #item-3 {
+        background-color: rgba(238, 238, 29, 0.765);
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="item-1">
+        <span>Box 1</span>
+      </div>
+      <div id="item-2">
+        <span>Box 2</span>
+      </div>
+      <div id="item-3">
+        <span>Box 3</span>
+      </div>
+    </div>
+  </body>
+</html>
