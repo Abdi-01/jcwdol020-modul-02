@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro DOM</title>
+  </head>
+  <body>
+    <h1 id="heading-1">Original Text</h1>
+    <div style="border: 1px solid blue; padding: 3px">
+      <input id="new-text" type="text" placeholder="Masukkan text baru" />
+      <button onclick="updateText()">Update Text</button>
+    </div>
+    <hr />
+    <!-- Latihan : Membuat aplikasi kalkulator
+    Ketentuannya :
+    1. Disiapkan dua element input dengan tipe number untuk menampung angka yang dihitung
+    2. Siapkan 4 button yang mewakili tiap operasi penjumlahan, pengurangan, pembagian dan perkalian
+    3. Setiap button di klik, maka akan memunculkan hasil perhitungan dibawahnya 
+    -->
+    <h2>Calculator</h2>
+  </body>
+  <script>
+    //
+    function updateText() {
+      const selectedElement = document.getElementById("heading-1");
+      const selectedInputElement = document.getElementById("new-text");
+
+      console.log("CHECK", selectedElement); // memeriksa isi dari element yang dipilih
+      selectedElement.innerText = selectedInputElement.value;
+    }
+    /////////////////////////////////////
+  </script>
+</html>
