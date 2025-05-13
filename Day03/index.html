@@ -52,6 +52,19 @@
       const email = document.getElementById("email").value;
 
       console.log(name, age, email);
+      database.push({
+        nama: name,
+        usia: age,
+        email: email,
+      });
+
+      //   Menjalankan fungsi render data kedalam table
+      printData();
+      console.log(database);
+    }
+
+    function printData() {
+      //
     }
   </script>
 </html>
