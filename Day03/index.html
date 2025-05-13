@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      style="
+        width: fit-content;
+        margin: auto;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 10px;
+      "
+    >
+      <div id="form-input">
+        <label style="display: block">Nama</label>
+        <input id="name" type="text" placeholder="Masukkan Nama" />
+      </div>
+      <div id="form-input">
+        <label style="display: block">Usia</label>
+        <input id="age" type="number" placeholder="Masukkan Usia" />
+      </div>
+      <div id="form-input">
+        <label style="display: block">Email</label>
+        <input id="email" type="email" placeholder="Masukkan Email" />
+      </div>
+      <button type="button">Submit</button>
+      <hr />
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Usia</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="print-result"></tbody>
+      </table>
+    </div>
+  </body>
+</html>
