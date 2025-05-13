@@ -27,7 +27,7 @@
         <label style="display: block">Email</label>
         <input id="email" type="email" placeholder="Masukkan Email" />
       </div>
-      <button type="button">Submit</button>
+      <button type="button" onclick="onSubmitData()">Submit</button>
       <hr />
       <table>
         <thead>
@@ -43,4 +43,15 @@
       </table>
     </div>
   </body>
+  <script>
+    const database = [];
+
+    function onSubmitData() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+      const email = document.getElementById("email").value;
+
+      console.log(name, age, email);
+    }
+  </script>
 </html>
