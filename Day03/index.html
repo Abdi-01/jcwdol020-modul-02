@@ -75,7 +75,7 @@
             <td><input id="new-name" type="text" value="${value.nama}"/></td>
             <td><input id="new-age" type="number" value="${value.usia}"/></td>
             <td><input id="new-email" type="email" value="${value.email}"/></td>
-            <td><button>Save</button>
+            <td><button onclick="onSave()">Save</button>
               <button onclick="onCancel()">Cancel</button></td>
             </tr>`;
         }
@@ -104,6 +104,16 @@
     }
 
     function onCancel() {
+      selectedIndex = null;
+      printData();
+    }
+
+    function onSave() {
+      database[selectedIndex] = {
+        nama: document.getElementById("new-name").value,
+        usia: document.getElementById("new-age").value,
+        email: document.getElementById("new-email").value,
+      };
       selectedIndex = null;
       printData();
     }
