@@ -45,6 +45,7 @@
   </body>
   <script>
     const database = [];
+    let selectedIndex = null;
 
     function onSubmitData() {
       const name = document.getElementById("name").value;
@@ -68,17 +69,43 @@
 
       // Data array of object -> Data array of string
       const print = database.map((value, index) => {
+        if (selectedIndex == index) {
+          return `<tr>
+            <td>${index + 1}</td>
+            <td><input id="new-name" type="text" value="${value.nama}"/></td>
+            <td><input id="new-age" type="number" value="${value.usia}"/></td>
+            <td><input id="new-email" type="email" value="${value.email}"/></td>
+            <td><button>Save</button>
+              <button onclick="onCancel()">Cancel</button></td>
+            </tr>`;
+        }
         return `<tr>
           <td>${index + 1}</td>
           <td>${value.nama}</td>
           <td>${value.usia}</td>
           <td>${value.email}</td>
-          <td><button>Edit</button><button>Delete</button></td>
+          <td><button onclick="onSelect(${index})">Edit</button>
+            <button onclick="onDelete(${index})">Delete</button></td>
           </tr>`;
       });
       console.log(database);
       console.log(print);
       tbody.innerHTML = print.join("");
+    }
+
+    function onDelete(index) {
+      database.splice(index, 1);
+      printData();
+    }
+
+    function onSelect(index) {
+      selectedIndex = index;
+      printData();
+    }
+
+    function onCancel() {
+      selectedIndex = null;
+      printData();
     }
   </script>
 </html>
