@@ -64,7 +64,21 @@
     }
 
     function printData() {
-      //
+      const tbody = document.getElementById("print-result");
+
+      // Data array of object -> Data array of string
+      const print = database.map((value, index) => {
+        return `<tr>
+          <td>${index + 1}</td>
+          <td>${value.nama}</td>
+          <td>${value.usia}</td>
+          <td>${value.email}</td>
+          <td><button>Edit</button><button>Delete</button></td>
+          </tr>`;
+      });
+      console.log(database);
+      console.log(print);
+      tbody.innerHTML = print.join("");
     }
   </script>
 </html>
